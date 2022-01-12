@@ -1,5 +1,6 @@
 require 'rails_helper'
-RSpec.feature "ProductDetails", type: :feature, js: true do
+
+RSpec.feature "Visitor add product from home page ", type: :feature, js: true do
 
   # SETUP
   before :each do
@@ -14,15 +15,16 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
       )
     end
   end
-  scenario "They see products details" do
+  scenario "They product add to cart" do
     # ACT
     visit root_path
-    find_link("Details »", match: :first).click
-    sleep 5
     puts page.html
+    click_button("Add", match: :first).click
+    sleep 5
+   
     # DEBUG / VERIFY
     save_screenshot
-    expect(page).to have_content 'Quantity'
+    expect(page).to have_content 'My Cart (1)'
   end
 
 end

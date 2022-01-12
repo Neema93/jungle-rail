@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+# create new user 
     def new
     end
 

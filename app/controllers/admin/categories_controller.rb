@@ -1,5 +1,8 @@
 class Admin::CategoriesController < ApplicationController
-    def index
+  # Add Http Authentication for admin
+  http_basic_authenticate_with name: ENV['HTTP_BASIC_USER'], password: ENV['HTTP_BASIC_PASSWORD'], except: [:new, :create, :destroy]   
+  # Admin able to create new category delete new category
+  def index
         @category = Category.order(id: :desc).all
     end
     

@@ -4,7 +4,7 @@ class Product < ActiveRecord::Base
   mount_uploader :image, ProductImageUploader
 
   belongs_to :category
-
+# add validation for product form 
   validates :name, presence: true
   validates :price, presence: true
   validates :quantity, presence: true

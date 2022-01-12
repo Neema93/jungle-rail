@@ -31,7 +31,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+* spec
 
 ## Display Image
-![main Jungle page]()
-![show page]()
+![main Jungle page](https://github.com/Neema93/jungle-rail/blob/master/doc/main.png)
+![show page](https://github.com/Neema93/jungle-rail/blob/master/doc/show.png)
